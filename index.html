@@ -11,7 +11,7 @@
     <!-- font css -->
     <link rel="stylesheet" href="./styles/font.css">
 </head>
-<body>
+<body class="bg-[#F5FFF6]">
     <!-- head part -->
     <header>
         <!-- navigation -->
@@ -59,14 +59,72 @@
     </header>
     <main>
         <!-- main div -->
-        <div>
+        <div class="mx-5 mb-30 lg:mx-[58px] lg:my-[48px] mt-4 lg:grid flex flex-col gap-3 lg:grid-cols-[75%_25%] justify-between">
             <!-- cart div -->
-             <div>
+             <div class="flex flex-col lg:gap-5 gap-3 lg:grid lg:grid-cols-3 order-2 lg:order-1" >
+                <!-- 1st cart -->
+                <div id="card" class="bg-white shadow-md p-5 rounded-[12px] lg:rounded-[12px] flex flex-col gap-3">
+                    <!-- top section -->
+                    <div class="flex items-center justify-between">
+                        <div class="bg-[#FFE3E2] p-3.5 lg:p-3.5 rounded-[16px] lg:rounded-[16px]">
+                            <img src="./assets/emergency.png" class="h-6 w-6 lg:h-[32px] lg:w-[32px]" />
+                        </div>
+                        <button id="heart-btn" class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <!-- title part -->
+                    <div>
+                        <h1 id="title" class="font-bold text-[1rem] lg:text-[1.5rem]">
+                            National Emergency Number
+                        </h1>
+                        <p class="text-[0.875rem] lg:text-[1.125rem] text-[#5C5C5C]">
+                            National Emergency
+                        </p>
+                    </div>
+                    <!-- number part this is the copy part to the clipboard -->
+                    <div>
+                        <h1 id="number" class="font-bold text-[1rem] lg:text-[2rem]">
+                            999
+                        </h1>
+                        <p class="text-[0.875rem] lg:text-[1.125rem] text-[#5C5C5C] bg-[#F2F2F2] lg:py-1.5 lg:px-4  lg:rounded-2xl rounded-2xl flex justify-center w-10">
+                            All
+                        </p>
+                    </div>
+                    <div class="flex gap-2">
+                        <!-- copy button -->
+                        <button id="btn-copy" class="flex justify-center items-center cursor-pointer gap-2 bg-white border-1 border-gray-400 py-2 rounded-md  text-white w-full">
+                            <p class="font-normal lg:text-[1rem] text-[0.875rem] text-[#5C5C5C]">
+                                <i class="fa-regular fa-copy"></i> Copy
+                            </p>
+                        </button>
+                        <!-- call button -->
+                        <button id="btn-call" class="flex justify-center items-center gap-1 cursor-pointer bg-[#00A63E] py-2 rounded-md  text-white w-full">
+                            <p class="font-normal lg:text-[1rem] text-[0.875 rem]">
+                                <i class="fa-solid fa-phone"></i>  Call
+                            </p>
+                        </button>
+                    </div>
+                </div>
+                
 
              </div>
             <!-- call list div -->
-            <div>
+            <div class="p-4 h-full w-full bg-white rounded-lg shadow-lg order-2 lg:order-2">
+                <div class="flex items-center justify-between">
+                    <!-- clock call history -->
+                    <div class="flex gap-2 items-center">
+                        <p class="text-[1rem]"> 
+                            <i class="fa-regular fa-clock"></i> Call History
+                        </p>
+                    </div>
+                    <button id="btn-clear" class="h-10 flex justify-center items-center gap-1 cursor-pointer bg-[#00A63E] py-2 px-4 rounded-full text-white">
+                        <p class="font-medium lg:text-[1rem] text-[0.875rem]">
+                            Clear
+                        </p>
+                    </button>
+                </div>
+                <div id="call-history-container">
 
+                </div>
             </div>
         </div>
     </main>
