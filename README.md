@@ -25,7 +25,7 @@ Answer:
 
 Event Delegation is basically a pattern to handle events efficiently. suppose we have various buttons and we need multiple event listener so instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the this '.target' property of the event object.And buy using it we can make our code more readable to other and can work more effectively.
 
-6. What is the difference between preventDefault() and stopPropagation() methods?
+5. What is the difference between preventDefault() and stopPropagation() methods?
 Answer:
 
 preventDefault() this is stops the default browser behavior. like in button it take as a submit from and sometime it take it's time to show the value and there is why we use that function to prevent that default browser behavior
