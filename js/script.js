@@ -2,15 +2,17 @@
 // hart button click
 const hartButtons = document.querySelectorAll('#btn-heart');
 for (let i = 0; i < hartButtons.length; i++) {
-  hartButtons[i].addEventListener('click', function() {
+  hartButtons[i].addEventListener('click', function(event) {
+    event.preventDefault();
     const hartCounter = document.getElementById('heart-count');
     hartCounter.innerText = parseInt(hartCounter.innerText) + 1;
   });
 }
 // copy button click
 const copyButton = document.querySelectorAll('#btn-copy');
-for(let i = 0; i<copyButton.length; i++){
-    copyButton[i].addEventListener('click', function(){
+for(let i = 0; i< copyButton.length; i++){
+    copyButton[i].addEventListener('click', function(event){
+      event.preventDefault();
         const copyCount = document.getElementById('copy-count');
         copyCount.innerText = parseInt(copyCount.innerText) + 1;
         const cart = this.closest('#card');
@@ -26,7 +28,8 @@ for(let i = 0; i<copyButton.length; i++){
 
 const callButtons = document.querySelectorAll('#btn-call');
 callButtons.forEach((button) => {
-  button.addEventListener('click', function () {
+  button.addEventListener('click', function (event) {
+    event.preventDefault();
     const card = this.closest('#card');
     const title = card.querySelector('#title').innerText;
     const number = card.querySelector('#number').innerText;
@@ -34,7 +37,7 @@ callButtons.forEach((button) => {
     const coin = document.getElementById('coin').innerText;
 
     if (coin == 0) {
-      alert(" You don't have enough coin ");
+      alert(" You don't have enough coin if you want to call you must have 20 coins ");
     } 
     else {
       document.getElementById('coin').innerText = document.getElementById('coin').innerText - 20;
